@@ -28,8 +28,8 @@ for i, link in enumerate(links):
         response = requests.get(link)
         with open(f"downloads/{file_name}", "wb") as file:
             file.write(response.content)
-        print(f"✅ Downloaded: {file_name}")
+        print(f"Downloaded: {file_name}")
     except Exception as e:
-        print(f"⚠️ Failed to download {link}: {e}")
+        print(f"Failed to download {link}: {e}")
 
-print("🎉 All downloads completed!")
+print("All downloads completed!")
